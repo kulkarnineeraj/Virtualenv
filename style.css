@@ -1,0 +1,142 @@
+.header {
+  padding: 80px; /* some padding */
+  text-align: center; /* center the text */
+  background: #1abc9c; /* green background */
+  color: white; /* white text color */
+}
+
+/* Increase the font size of the <h1> element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden; /* Hide overflow */
+  background-color: #333; /* Dark background color */
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 14px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+  background-color: #ddd; /* Grey background color */
+  color: black; /* Black text color */
+}
+
+.footer {
+  padding: 20px; /* Some padding */
+  text-align: center; /* Center text*/
+  background: #ddd; /* Grey background */
+}
+
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+input.textBox
+{
+margin-top: 5px;
+margin-bottom: 5px;
+height: 30px;
+width: 300px;
+font-size: 15px;
+line-height: 30px;
+display:inline-block;
+
+}
+
+label.inputLabel
+{
+font-family: Verdana;
+font-size: 15px;
+line-height: 30px;
+display: inline-block;
+}
+.footer {
+  margin: none;
+  padding: 10px; /* Some padding */
+  text-align: center; /* Center text*/
+  color: white;
+  background: black; /* Grey background */
+}
+
+.main{
+margin-top:20px;
+width:600px;
+position:absolute;
+left:50%;
+top:10%	
+bottom:50%;
+background-color:lighterorange;
+}
+.sideright{
+margin-top:20px;
+width:600px;
+align:left;
+right:50%;
+top:50%;
+background-color:light gray;
+}

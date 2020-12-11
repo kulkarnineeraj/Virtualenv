@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<title>photopage1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+
+
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div id=header class="w3-bar w3-black">
+  <a href="Chintamaninagar.html" class="w3-button w3-bar-item">Home</a>
+  <a href="articles.html" class="w3-button w3-bar-item">Articles</a>
+  <a href="upload.html" class="w3-button w3-bar-item">Upload</a>
+  <a href="contact.html" class="w3-button w3-bar-item">Contacts</a>
+  <a href="contactus.html"  class="w3-button w3-bar-item">Contact Us</a>
+</div>
+
+<style>
+
+
+
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+<body>
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<div class="w3-opacity">
+<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+
+  <h1><b>Articles</b></h1>
+
+
+<!-- Photo Grid -->
+
+<div class="row">
+	
+	
+	
+	
+	<div class="col-container">
+		
+		<div class="col-1">
+			<!-- Blank column to show padding -->
+		</div>
+		
+		<div class="col-2" style = "border: 3px solid orange">
+			<h6>Title 1</h6>
+			<div class="card">
+			  <img src="./images/Emerson_Poems_1847_-_The_Rhodora.jpg" alt="Articles" style="width:100%">
+			 <!--<img src="./images/Emerson_Poems_1847_-_The_Rhodora.jpg" onClick="swap(this)" onmouseover="" style="cursor: pointer;" height="100" width="50">-->
+			  <br>
+			  <p>
+			 <!-- pop article -->
+			 
+				<input type="button" value="Read" onclick="window.open('./images/Emerson_Poems_1847_-_The_Rhodora.jpg')">
+				<!--<input type="button" value="Read"  onClick="swap(this)" onmouseover="" style="cursor: pointer;" height="100" width="50">-->
+
+				
+
+			</div>
+		</div>
+
+		<div class="col-1">
+			<!-- Blank column to show padding -->
+		</div>
+		
+		<div class="col-2" style = "border: 3px solid orange">
+			<h6>Title 2</h6>
+			<div class="card">
+			  <img src="./images/Title1.jpg" alt="Articles" style="width:100%">
+			  <br>
+			  <p>
+				<!-- pop article -->
+				<input type="button" value="Read" onclick="window.open('./images/DMTrZeUUQAIDr8m.jpg')">
+			</div>
+		</div>
+		
+		<div class="col-1">
+			<!-- Blank column to show padding -->
+		</div>
+		
+		<div class="col-2" style = "border: 3px solid orange">
+			<h6>Title 3</h6>
+			<div class="card">
+			  <img src="./images/Title1.jpg" alt="Articles" style="width:100%">
+			  <br>
+			  <p>
+			  <!-- pop article -->
+				<input type="button" value="Read" onclick="window.open('./images/sdfghjk.jpg')">
+			</div>
+		</div>
+		
+	
+
+	
+	</div> <!-- end of container -->
+</div> <!-- end of row -->
+
+	<div class="row">
+	<div class="col-container">
+		<div class="col-1">
+			<!-- Blank column to show padding -->
+		</div>
+		
+		
+		
+		<div class="col-2" style = "border: 3px solid orange">
+			<h6>Title 4</h6>
+			<div class="card">
+			  <img src="./images/Title1.jpg" alt="Articles" style="width:100%">
+			  <br>
+			  <p>
+			  <!-- pop article -->
+				<input type="button" value="Read" onclick="window.open('./images/Emerson_Poems_1847_-_Uriel.jpg')">
+			</div>
+		</div>
+		<div class="col-1">
+			<!-- Blank column to show padding -->
+		</div>
+		<div class="col-2" style = "border: 3px solid orange">
+			<h6>Title 5</h6>
+			<div class="card">
+			  <img src="./images/Title1.jpg" alt="Articles" style="width:100%">
+			  <br>
+			  <p>
+			  <!-- pop article -->
+				<input type="button" value="Read" onclick="window.open('./images/txcgvhbjn.jpg')">
+			</div>
+		</div>
+		
+		<div class="col-1">
+			<!-- Blank column to show padding -->
+		</div>
+		
+		<div class="col-2" style = "border: 3px solid orange">
+			<h6>Title 6</h6>
+			<div class="card">
+			  <img src="C:\Users\Admin\Downloads\img1.jpeg" alt="Articles" style="width:100%">
+			  <br>
+			  <p>
+			  <!-- pop article -->
+				<input type="button" value="Read" onclick="window.open('./images/img1.jpeg')">
+			</div>
+		</div>
+		
+	</div> <!-- end of container -->
+</div>  <!-- end of row -->
+
+
+<script>
+$('input#fileContainer').on('change', function () {
+    console.log(this);
+
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        console.log(reader.result + '->' + typeof reader.result)
+        var thisImage = reader.result;
+		
+        localStorage.setItem("imgData", thisImage);
+		
+    };
+    reader.readAsDataURL(this.files[0]);
+});
+
+
+$('input#show').click(function () {
+    var dataImage = localStorage.getItem('imgData');
+    console.log(dataImage);
+    var imgCtr = $('<img/>').prop('src', dataImage);
+    $('div#imgContainer').append(imgCtr);
+});
+</script>
+
+
+
+</div>
+
+<!-- End Page Content -->
+</div>
+
+
+<script>
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else { 
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
+
+<br><img id="myImg" src=""./images/IMG-20190720-WA0020.jpg"" alt="your image" height=400 width=300>
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+</body>
+</html>

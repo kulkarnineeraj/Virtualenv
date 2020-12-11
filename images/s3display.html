@@ -1,0 +1,28 @@
+<section data-ng-controller="myCtrl">
+    <img ng-src="{{s3Url}}{{image.Key}}" width="200px" height="200px" ng-repeat="image in allImageData">
+</section>	
+
+
+<script>
+function myCtrl($scope, $timeout) {    
+    AWS.config.update({
+    accessKeyId: 'AKIA6MICMND547M5IYAK', secretAccessKey: 'Ajl9HAMhe7M2RO8ssQHcmJIj/1N8npZO0vLZcH6r+'});
+    AWS.config.region = "ap-south-1";
+
+var bucket = new AWS.S3({params: {Bucket: 'chintamaninagar.com'}});
+
+    bucket.getObject({Key: 'img1.jpeg'},function(err,file){
+
+    $timeout(function(){
+        $scope.s3url = "data:image/jpeg;base64," + encode(file.Body);
+    },1);
+});
+}
+
+function encode(data)
+{
+    var str = data.reduce(function(a,b){ return a+String.fromCharCode(b) },'');
+    return btoa(str).replace(/.{76}(?=.)/g,'$&\n');
+}
+</script>
+
